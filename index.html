@@ -25,14 +25,14 @@
             <ul class="hero__content--combos">
                 <li class="hero__content--combos-item">
                     <img src="./dist/img/images/logos/disney_star_plus.png" alt="">
-                    <button>Assine Agora</button>
+                    <button class="btn">Assine Agora</button>
                     <span class="text">
                         R$45,90/mês*
                     </span>
                 </li>
                 <li class="hero__content--combos-item">
                     <img src="./dist/img/images/logos/disney_star_plus.png" alt="">
-                    <button>Assine Agora</button>
+                    <button class="btn">Assine Agora</button>
                     <span class="text">
                         R$45,90/mês*
                     </span>
@@ -43,5 +43,110 @@
             </p>
         </div>
     </section>
+    <section class="shows">
+        <nav class="shows__tabs">
+            <button data-tab-button="em_breve" class="shows__tabs--button shows__tabs--button-active">
+                Em breve
+            </button>
+            <button data-tab-button="mais_populares" class="shows__tabs--button">
+                Mais populares
+            </button>
+            <button data-tab-button="mais_no_star" class="shows__tabs--button">
+                Mais no Star+
+            </button>
+        </nav>
+        <ul data-tab-id="em_breve" class="shows__list shows__list-active">
+            <li class="shows__list--item shows__list--item">
+                <img src="./dist/img/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/em_breve/lobisomem.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/em_breve/desencantada.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/em_breve/sem_limites.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/em_breve/the_santa_clauses.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/em_breve/willow.jpg" alt="Spidey">
+            </li>
+        </ul>
+        <ul data-tab-id="mais_populares" class="shows__list">
+            <li class="shows__list--item shows__list--item">
+                <img src="./dist/img/images/mais_populares/bluey.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_populares/cavaleira_da_lua.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_populares/o_incrivel_dr_pol.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_populares/obi_wan.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_populares/red.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_populares/tudo_igual_sqn.jpg" alt="Spidey">
+            </li>
+        </ul>
+        <ul data-tab-id="mais_no_star" class="shows__list">
+            <li class="shows__list--item shows__list--item">
+                <img src="./dist/img/images/mais_no_star_plus/belair.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_no_star_plus/libertadores.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_no_star_plus/nba.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_no_star_plus/os_simpson.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_no_star_plus/premier_league.jpg" alt="Spidey">
+            </li>
+            <li class="shows__list--item">
+                <img src="./dist/img/images/mais_no_star_plus/the_kardashians.jpg" alt="Spidey">
+            </li>
+        </ul>
+    </section>
+    <section class="plans">
+        <h2 class="title__big">Escolha seu plano</h2>
+        <ul class="plans__list">
+            <li class="plans__list--item">
+                <img src="dist/img/images/logos/disneyplus_underline.png" alt="">
+                <strong class="title__small">R$ 33,90/mês</strong>
+                <p class="text__big">
+                    No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
+                </p>
+                <button class="btn">Assine Agora</button>
+            </li>
+            <li class="plans__list--item">
+                <img src="dist/img/images/logos/disney_star_plus_sm.png" alt="">
+                <strong class="title__small">R$ 55,90/mês</strong>
+                <p class="text__big">
+                    Assine o Disney+ e Star+ juntos. Economize e aproveite agora os dois serviços por um preço único.
+                </p>
+                <button class="btn">Assine Agora</button>
+            </li>
+            <li class="plans__list--item">
+                <img src="dist/img/images/logos/disney_star_plus_starzplay_underline.png" alt="">
+                <strong class="title__small">R$ 59,90/mês</strong>
+                <p class="text__big">
+                    Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os três serviços juntos.
+                </p>
+                <button class="btn">Assine Agora</button>
+            </li>
+        </ul>
+        <p class="text__small">*O preço pode variar caso a assinatura seja feita através de outras plataformas.</p>
+    </section>
+
+    <script src="src/main.js"></script>
 </body>
 </html>
