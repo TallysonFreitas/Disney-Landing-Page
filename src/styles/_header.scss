@@ -1,0 +1,64 @@
+@use 'variaveis';
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+    z-index: 1;
+    transition: background-color ease 0.5s;
+
+
+    &--is-hidden{
+        background-color: transparent;
+
+        .header{
+            &__logo{
+                opacity: 0;
+                visibility: hidden;
+            }
+            &__links--item:first-child{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+    }
+
+    &__container{
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 80px;
+        margin: 5px;
+        transition: opacity ease 0.5s;
+
+        @media (max-width:768px){
+        max-width: 64px;
+        }
+    }
+
+    &__links{
+        display: flex;
+        list-style: none;
+
+        &--item{
+            margin: 5px;
+            transition: opacity ease 0.5s;
+        }
+    }
+
+    .btn{
+        height: 50px;
+        
+        @media (max-width:768px){
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
+    }
+}

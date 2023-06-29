@@ -11,6 +11,10 @@
         grid-template-columns: repeat(4, 24%);
         gap: 1.33%;
 
+        @media (max-width:768px){
+            display: block;
+        }
+
         &--item{
             h4{
                 margin: 20px 0 24px;

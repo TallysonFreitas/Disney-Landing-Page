@@ -2,6 +2,9 @@
 @use 'shows';
 @use 'plans';
 @use 'available-devices';
+@use 'faq';
+@use 'footer';
+@use 'header';
 @use 'variaveis';
 
 @font-face {
@@ -29,12 +32,39 @@
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corDoBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        background-color: lighten(variaveis.$corDoBotaoPrimario, 3%);
+    }
+
+    &--secundary{
+        background-color: variaveis.$corDoBotaoSecudario;
+
+        &:hover{
+            background-color: lighten(variaveis.$corDoBotaoSecudario, 3%);
+        }
+    }
+
+    &--dark{
+        background-color: variaveis.$corDoBotaoDark;
+        border-color:variaveis.$corTextoSecundario;
+
+        &:hover{
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
 body{
@@ -55,15 +85,27 @@ body{
 }
 
 .text__big{
-    @include text(18px)
+    @include text(18px);
+
+    @media (max-width:768px){
+        @include text(15px)
+    }
 }
 
 .text{
-    @include text
+    @include text;
+
+    @media (max-width:768px){
+        @include text(14px)
+    }
 }
 
 .text__small{
-    @include text(12px)
+    @include text(12px);
+
+    @media (max-width:768px){
+        @include text(11px)
+    }
 }
 
 .link-text{
@@ -73,15 +115,27 @@ body{
 }
 
 .title{
-    @include title
+    @include title;
+
+    @media (max-width:768px){
+        @include title(24px)
+    }
 }
 
 .title__big{
-    @include title(44px)
+    @include title(44px);
+
+    @media (max-width:768px){
+        @include title(26px)
+    }
 }
 
 .title__small{
-    @include title(28px)
+    @include title(28px);
+
+    @media (max-width:768px){
+        @include title(22px)
+    }
 }
 
 .image-text-section{
@@ -89,6 +143,11 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+
+    @media (max-width:768px){
+        display: block;
+        text-align: center;
+    }
 
     img{
         max-width: 100%;
@@ -107,12 +166,25 @@ body{
         position: relative;
         display: flex;
         justify-content: end;
+        @media (max-width:768px){
+            position: relative;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+        
         img{
             width: 100%;
         }
         .image-text-section__item{
             position: absolute;
             width: calc(50% - 5.6vw);
+            @media (max-width:768px){
+                position: relative;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }

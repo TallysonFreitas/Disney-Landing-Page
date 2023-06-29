@@ -6,10 +6,13 @@
 
     &__list{
         margin-top: 44px;
-
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        @media (max-width:767px){
+            grid-template-columns: 1fr 1fr;
+        }
 
         &-active{
             display: grid;
@@ -18,6 +21,7 @@
         &--item{
 
             img{
+                max-width: 100%;
                 border-radius: 4px;
             }
         }
@@ -26,6 +30,11 @@
     &__tabs{
         display: flex;
         justify-content: center;
+        @media (max-width:768px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left:103px;
+        }
 
         &--button{
             color: variaveis.$corTextoSecundario;
